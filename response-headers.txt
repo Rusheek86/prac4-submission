@@ -1,0 +1,22 @@
+server: nginx/1.14.0 (Ubuntu)
+date: Mon, 31 Mar 2025 05:00:52 GMT
+content-type: text/html; charset=utf-8
+content-length: 130737
+content-security-policy: default-src 'self'; img-src data: blob: *; script-src-elem 'self' assets.ubuntu.com www.google-analytics.com www.googletagmanager.com dev.visualwebsiteoptimizer.com www.youtube.com asciinema.org player.vimeo.com script.crazyegg.com w.usabilla.com munchkin.marketo.net serve.nrich.ai ml314.com scout-cdn.salesloft.com snippet.maze.co www.googleadservices.com js.zi-scripts.com *.g.doubleclick.net www.google.com www.gstatic.com *.googlesyndication.com js.stripe.com d3js.org www.brighttalk.com cdnjs.cloudflare.com static.ads-twitter.com *.cdn.digitaloceanspaces.com www.redditstatic.com snap.licdn.com connect.facebook.net jspm.dev cdn.livechatinc.com api.livechatinc.com secure.livechatinc.com www.tfaforms.com api.usabilla.com *.cloudfront.net 'unsafe-inline'; font-src 'self' assets.ubuntu.com cdn.livechatinc.com secure.livechatinc.com fonts.google.com; script-src 'self' blob: 'unsafe-eval' 'unsafe-hashes' 'unsafe-inline'; connect-src 'self' *.googlesyndication.com www.google.com ubuntu.com analytics.google.com www.googletagmanager.com sentry.is.canonical.com www.google-analytics.com *.crazyegg.com scout.salesloft.com *.g.doubleclick.net js.zi-scripts.com *.mktoresp.com prompts.maze.co *.google-analytics.com pixel-config.reddit.com www.redditstatic.com conversions-config.reddit.com px.ads.linkedin.com ws.zoominfo.com api.livechatinc.com cdn.livechatinc.com secure.livechatinc.com youtube.com google.com fonts.google.com api.text.com; frame-src 'self' *.doubleclick.net www.youtube.com/ asciinema.org player.vimeo.com js.stripe.com www.googletagmanager.com www.google.com www.brighttalk.com cdn.livechatinc.com secure.livechatinc.com cdn.livechat-static.com *.cloudfront.net app3.trueability.com app.trueability.com; style-src *.cloudfront.net 'self' 'unsafe-inline'; media-src 'self' res.cloudinary.com cdn.livechatinc.com secure.livechatinc.com cdn.livechat-static.com; child-src api.livechatinc.com cdn.livechatinc.com secure.livechatinc.com youtube.com google.com fonts.google.com;
+referrer-policy: strict-origin-when-cross-origin
+cross-origin-embedder-policy: unsafe-none
+cross-origin-opener-policy: same-origin-allow-popups
+cross-origin-resource-policy: cross-origin
+x-permitted-cross-domain-policies: none
+x-flask-squeeze-minify: ratio=1.0x; duration=5.6ms
+x-view-name: canonicalwebteam.templatefinder.templatefinder.template_finder
+x-clacks-overhead: GNU Terry Pratchett
+permissions-policy: interest-cohort=()
+cache-control: max-age=60, stale-while-revalidate=86400, stale-if-error=300
+x-content-type-options: NOSNIFF
+x-vcs-revision: 1743169347-d791745
+x-request-id: 9a352abb779ce2af876c7aae408c781b
+strict-transport-security: max-age=15724800
+link: <https://assets.ubuntu.com>; rel=preconnect; crossorigin, <https://assets.ubuntu.com>; rel=preconnect, <https://res.cloudinary.com>; rel=preconnect
+x-cache-status: HIT from content-cache-il3/0
+accept-ranges: bytes

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX Color Page</title>
+</head>
+<body>
+  <h1 id="color-heading">Loading color...</h1>
+  <button id="load-color">Change Color</button>
+
+  <script>
+    function fetchColor() {
+      fetch('/color.txt')
+        .then(res => res.text())
+        .then(color => {
+          const heading = document.getElementById('color-heading');
+          heading.textContent = color;
+          heading.style.color = color;
+        })
+        .catch(err => {
+          console.error('Error fetching color:', err);
+        });
+    }
+
+    // Load color on page load
+    window.addEventListener('DOMContentLoaded', fetchColor);
+
+    // Load color on button click
+    document.getElementById('load-color').addEventListener('click', fetchColor);
+  </script>
+</body>
+</html>

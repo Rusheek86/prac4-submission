@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My AJAX Site</title>
+</head>
+<body>
+  <h1>My AJAX Site</h1>
+
+  <button onclick="loadContent('/contact.ajax')">Contact</button>
+  <button onclick="loadContent('/search.ajax')">Search</button>
+  <button onclick="loadContent('/about.ajax')">About</button>
+
+  <main id="content">
+    <!-- Content will be loaded here -->
+  </main>
+
+  <script>
+    function loadContent(url) {
+      fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('content').innerHTML = html;
+        })
+        .catch(err => {
+          document.getElementById('content').innerHTML = '<p>Error loading content.</p>';
+          console.error(err);
+        });
+    }
+  </script>
+</body>
+</html>

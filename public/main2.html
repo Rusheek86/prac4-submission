@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protected Page</title>
+</head>
+<body>
+  <h1>Welcome to Main2</h1>
+  <div id="content">Loading...</div>
+
+  <script>
+    function loadContent() {
+      fetch('/content.ajax')
+        .then(res => {
+          if (res.status === 403) {
+            document.getElementById('content').innerHTML = `
+              <p>You must accept the terms and conditions to continue.</p>
+              <button onclick="acceptTerms()">Accept</button>
+            `;
+          } else {
+            return res.text().then(html => {
+              document.getElementById('content').innerHTML = html;
+            });
+          }
+        })
+        .catch(err => {
+          document.getElementById('content').innerHTML = '<p>Error loading content.</p>';
+          console.error(err);
+        });
+    }
+
+    function acceptTerms() {
+      fetch('/accept')
+        .then(() => loadContent());
+    }
+
+    window.addEventListener('DOMContentLoaded', loadContent);
+  </script>
+</body>
+</html>

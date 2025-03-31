@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+  <style>
+    .post { margin-bottom: 2em; }
+    .timestamp { color: grey; }
+    .author a { color: blue; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>My Blog Posts</h1>
+  <div id="blog-posts"></div>
+  <button id="load-more">Load More</button>
+
+  <script>
+    let offset = 0;
+    const limit = 4;
+
+    function loadPosts() {
+      fetch(`/posts.json?first=${offset}&num=${limit}`)
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('blog-posts');
+          data.forEach(post => {
+            const div = document.createElement('div');
+            div.classList.add('post');
+
+            const time = new Date(post.time * 1000).toLocaleString();
+            div.innerHTML = `
+              <p class="timestamp">${time}</p>
+              <p class="author"><a href="${post.authorWeb}" target="_blank">${post.author}</a></p>
+              ${post.content}
+            `;
+            container.appendChild(div);
+          });
+
+          offset += data.length;
+        });
+    }
+
+    document.getElementById('load-more').addEventListener('click', loadPosts);
+    window.addEventListener('DOMContentLoaded', loadPosts);
+  </script>
+</body>
+</html>

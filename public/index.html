@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prac 4 Home</title>
+</head>
+<body>
+  <h1>My Prac 4 Express Server</h1>
+
+  <!-- Paragraph to be updated -->
+  <p id="last-visit">Loading last visit info...</p>
+
+  <script>
+    // Send AJAX request to /last.txt when the page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('/last.txt')
+        .then(response => response.text())
+        .then(data => {
+          const para = document.getElementById('last-visit');
+          if (data.trim() === '') {
+            para.textContent = 'This is your first time visiting!';
+          } else {
+            para.textContent = 'This page was last viewed ' + data;
+          }
+        })
+        .catch(err => {
+          console.error('Error fetching last visit:', err);
+        });
+    });
+  </script>
+</body>
+</html>

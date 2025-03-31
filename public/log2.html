@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live AJAX Visit Log</title>
+</head>
+<body>
+  <h1>Live AJAX Visit Log</h1>
+  <ul id="log-list">
+    <li>Loading...</li>
+  </ul>
+
+  <script>
+    // Function to update the log list
+    function updateLog() {
+      fetch('/log-ro.json')
+        .then(res => res.json())
+        .then(data => {
+          const ul = document.getElementById('log-list');
+          ul.innerHTML = ''; // Clear old list
+          data.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            ul.appendChild(li);
+          });
+        })
+        .catch(err => console.error('Error fetching log:', err));
+    }
+
+    // Trigger first timestamp (adds one visit)
+    fetch('/log.json')
+      .then(() => updateLog());
+
+    // Refresh every 10 seconds using /log-ro.json
+    setInterval(updateLog, 10000);
+  </script>
+</body>
+</html>

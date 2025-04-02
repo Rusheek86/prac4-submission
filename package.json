@@ -9,13 +9,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^4.21.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
-    "eslint": "^9.23.0",
+    "eslint": "^8.56.0",
     "globals": "^16.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rusheek86/prac4-submission.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rusheek86/prac4-submission/issues"
+  },
+  "homepage": "https://github.com/Rusheek86/prac4-submission#readme",
+  "description": ""
 }

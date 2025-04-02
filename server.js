@@ -150,7 +150,7 @@ app.get('/log-ro.json', (req, res) => {
 
 // Task 4.4: /contact.ajax
 app.get('/contact.ajax', (req, res) => {
-  res.send(`<a href="mailto:rusheek.saravanan@adelaide.edu.au">Email Rusheek</a>`);
+  res.send('<a href="mailto:rusheek.saravanan@adelaide.edu.au">Email Rusheek</a>');
 });
 
 // Task 4.4: /search.ajax

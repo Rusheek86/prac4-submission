@@ -1,15 +1,14 @@
 {
     "env": {
-      "node": true,
-      "es2021": true
+      "browser": true,
+      "es2021": true,
+      "node": true
     },
     "extends": "eslint:recommended",
-    "globals": {
-      "__dirname": "readonly"
-    },
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "script"
-    },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "error",
+      "no-console": "error",
+      "semi": ["error", "always"],
+      "quotes": ["error", "single"]
+    }
   }

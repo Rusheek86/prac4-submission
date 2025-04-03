@@ -1,14 +1,15 @@
 {
-    "env": {
-      "browser": true,
-      "es2021": true,
-      "node": true
-    },
-    "extends": "eslint:recommended",
-    "rules": {
-      "no-unused-vars": "error",
-      "no-console": "error",
-      "semi": ["error", "always"],
-      "quotes": ["error", "single"]
-    }
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "semi": ["error", "always"],
+    "no-unused-vars": "warn"
   }
+}

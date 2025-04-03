@@ -10,6 +10,7 @@
   "rules": {
     "indent": ["error", 2],
     "semi": ["error", "always"],
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "no-console": "off"
   }
 }
